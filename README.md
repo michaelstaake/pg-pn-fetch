@@ -28,7 +28,7 @@ Manufacturer part numbers appear on PartsGeek listings, with a copy button:
 
 The toolbar popup lists saved lookups so you can filter, copy, or clear them:
 
-![The add-on popup showing a saved Wagner lookup and the manufacturer part number](docs/screenshots/popup.png)
+![The add-on popup listing saved Dorman and Denso lookups, with copy and trash icons beside each part number](docs/screenshots/popup.png)
 
 ## Install in Firefox as a temporary add-on
 
