@@ -52,15 +52,6 @@ The add-on asks for:
 
 It does not need access to other websites.
 
-## What's new in 0.4
-
-- Lookups now use PartsGeek's site search results directly. 0.3 looked for links in those results (there are none), tried a brand page URL that does not exist, and fell back to DuckDuckGo. DuckDuckGo is gone, along with its permissions.
-- Requests run from the PartsGeek tab with its cookies, two at a time, and listings that share a product share a single request.
-- If PartsGeek's Cloudflare check blocks the search, listings show "Security check". Click Open check, finish the check in the new tab, then click Try again on any listing to retry them all.
-- Saving many lookups at once no longer loses some of them.
-- Policy pages such as `/legal-notice.html` are no longer mistaken for product pages.
-- The toolbar list labels PartsGeek's number as "PartsGeek 92779-03642776" instead of "internal".
-
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
