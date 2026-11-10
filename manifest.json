@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "PartsGeek Fetch Real Part Numbers",
-  "version": "0.5",
+  "version": "0.6",
   "description": "Shows the real manufacturer part number on PartsGeek listings and remembers past lookups.",
   "author": "PupSierra",
   "browser_specific_settings": {

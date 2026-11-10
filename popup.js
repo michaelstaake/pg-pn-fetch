@@ -1,5 +1,9 @@
 const api = typeof browser !== "undefined" ? browser : chrome;
 
+const COPY_ICON = `<svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
+const CHECK_ICON = `<svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"></path></svg>`;
+const TRASH_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 6h18"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"></path><path d="M10 11v6"></path><path d="M14 11v6"></path></svg>`;
+
 const listEl = document.getElementById("list");
 const emptyEl = document.getElementById("empty");
 const filterEl = document.getElementById("filter");
@@ -58,9 +62,9 @@ function render(items) {
           <div class="meta">${esc(item.brand)} · PartsGeek ${esc(item.internalSku || item.suffix)}</div>
           <div class="meta">${esc(formatDate(item.savedAt))}</div>
         </div>
-        <div>
-          <button type="button" data-copy="${esc(item.realPn)}">Copy</button>
-          <button type="button" data-key="${esc(item.key)}">Remove</button>
+        <div class="actions">
+          <button type="button" class="icon-btn" data-copy="${esc(item.realPn)}" aria-label="Copy" title="Copy">${COPY_ICON}${CHECK_ICON}</button>
+          <button type="button" class="icon-btn" data-key="${esc(item.key)}" aria-label="Remove" title="Remove">${TRASH_ICON}</button>
         </div>
       </div>
     `;
@@ -89,12 +93,21 @@ listEl.addEventListener("click", async (event) => {
   if (button.dataset.copy) {
     try {
       await navigator.clipboard.writeText(button.dataset.copy);
-      button.textContent = "Copied";
+      button.classList.remove("is-failed");
+      button.classList.add("is-copied");
+      button.setAttribute("aria-label", "Copied");
+      button.title = "Copied";
       window.setTimeout(() => {
-        button.textContent = "Copy";
+        if (!button.isConnected) return;
+        button.classList.remove("is-copied");
+        button.setAttribute("aria-label", "Copy");
+        button.title = "Copy";
       }, 1000);
     } catch (error) {
-      button.textContent = "Failed";
+      button.classList.remove("is-copied");
+      button.classList.add("is-failed");
+      button.setAttribute("aria-label", "Failed");
+      button.title = "Failed";
     }
   }
   if (button.dataset.key) {

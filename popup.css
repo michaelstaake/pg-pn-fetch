@@ -73,15 +73,66 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  align-items: baseline;
+  align-items: center;
 }
 
-.item button {
-  background: none;
+.actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 2px;
+  align-items: center;
+}
+
+.item button.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
   border: none;
+  border-radius: 4px;
+  background: transparent;
   color: #c45c14;
   cursor: pointer;
-  padding: 0;
+}
+
+.item button.icon-btn:hover {
+  background: #f6e4d6;
+}
+
+.item button.icon-btn:focus-visible {
+  outline: 2px solid #c45c14;
+  outline-offset: 1px;
+  background: #f6e4d6;
+}
+
+.item button.icon-btn svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.item button.icon-btn .icon-check {
+  display: none;
+}
+
+.item button.icon-btn.is-copied {
+  color: #1b7f3a;
+}
+
+.item button.icon-btn.is-copied .icon-copy {
+  display: none;
+}
+
+.item button.icon-btn.is-copied .icon-check {
+  display: block;
+}
+
+.item button.icon-btn.is-failed {
+  color: #c62828;
 }
 
 .empty {
