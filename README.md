@@ -1,3 +1,5 @@
+<img src="docs/icon.png" alt="PartsGeek Fetch Real Part Numbers icon" width="128">
+
 # PartsGeek Fetch Real Part Numbers
 
 A Firefox add-on that shows the real manufacturer part number on [PartsGeek](https://www.partsgeek.com) listings and remembers past lookups.
