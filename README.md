@@ -18,6 +18,16 @@ Some listings have no manufacturer number on PartsGeek at all (they only carry a
 
 If PartsGeek's Cloudflare check blocks the search, listings show "Security check". Click **Open check**, finish the check in the new tab, then click **Try again** on any listing to retry them all.
 
+## Screenshots
+
+Manufacturer part numbers appear on PartsGeek listings, with a copy button:
+
+![A PartsGeek listing for a Wagner brake rotor, with the manufacturer part number DSX126457E shown next to the PartsGeek SKU](docs/screenshots/listing.png)
+
+The toolbar popup lists saved lookups so you can filter, copy, or clear them:
+
+![The add-on popup showing a saved Wagner lookup and the manufacturer part number](docs/screenshots/popup.png)
+
 ## Install in Firefox as a temporary add-on
 
 This add-on is not published on [addons.mozilla.org](https://addons.mozilla.org), so Firefox will not install it the way it installs signed extensions from the store. Instead, you load it yourself as a **temporary add-on**.
