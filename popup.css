@@ -1,0 +1,109 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 380px;
+  background: #fffaf6;
+  color: #2b2b2b;
+  font: 13px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+header {
+  padding: 12px 14px 8px;
+  background: #c45c14;
+  color: #fff;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.version, footer {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 11px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px 0;
+}
+
+#filter {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ddc2ad;
+  border-radius: 4px;
+}
+
+#clear {
+  border: 1px solid #ddc2ad;
+  background: #fff;
+  border-radius: 4px;
+  color: #8a3d0d;
+  cursor: pointer;
+}
+
+#list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0 14px 8px;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0e0d4;
+}
+
+.pn {
+  font-weight: 700;
+  color: #8a3d0d;
+}
+
+.meta {
+  color: #666;
+  font-size: 12px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.item button {
+  background: none;
+  border: none;
+  color: #c45c14;
+  cursor: pointer;
+  padding: 0;
+}
+
+.empty {
+  padding: 16px 14px;
+  color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  padding: 8px 14px 12px;
+  color: #7a5a42;
+}
+
+.version a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.version a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}

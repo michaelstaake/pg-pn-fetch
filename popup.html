@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>PartsGeek Fetch Real Part Numbers</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>PartsGeek Fetch Real Part Numbers</h1>
+    <p class="version">Version 0.4 by <a href="https://github.com/michaelstaake/pg-pn-fetch" target="_blank" rel="noopener noreferrer">PupSierra</a></p>
+  </header>
+  <div class="toolbar">
+    <input id="filter" type="search" placeholder="Filter saved lookups">
+    <button id="clear" type="button">Clear all</button>
+  </div>
+  <p id="empty" class="empty hidden">No saved lookups yet. Open a PartsGeek listing and the plugin will start filling this list.</p>
+  <ul id="list"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>

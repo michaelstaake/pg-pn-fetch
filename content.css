@@ -1,0 +1,92 @@
+
+.pgrpn-panel {
+  margin-top: 6px;
+  padding: 3px 8px;
+  height: 22px;
+  box-sizing: content-box;
+  border: 1px solid #e8c4a8;
+  border-left: 4px solid #c45c14;
+  background: #fff8f2;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 22px;
+  color: #2b2b2b;
+  overflow: hidden;
+}
+
+.pgrpn-panel.pgrpn-ok {
+  border-left-color: #1b7f3a;
+}
+
+.pgrpn-panel.pgrpn-fail {
+  border-left-color: #c62828;
+}
+
+.pgrpn-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.pgrpn-icon {
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.pgrpn-icon-spin {
+  border: 2px solid #e8c4a8;
+  border-top-color: #c45c14;
+  border-radius: 50%;
+  animation: pgrpn-spin 0.65s linear infinite;
+}
+
+.pgrpn-icon-ok {
+  color: #1b7f3a;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.pgrpn-icon-fail {
+  color: #c62828;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 14px;
+}
+
+@keyframes pgrpn-spin {
+  to { transform: rotate(360deg); }
+}
+
+.pgrpn-real {
+  font-weight: 700;
+  color: #8a3d0d;
+  letter-spacing: 0.01em;
+}
+
+.pgrpn-text {
+  color: #555;
+}
+
+.pgrpn-link {
+  padding: 0;
+  background: none;
+  border: none;
+  color: #c45c14;
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
+  white-space: nowrap;
+}
+
+.pgrpn-link:hover {
+  color: #8a3d0d;
+}
