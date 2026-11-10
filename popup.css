@@ -97,13 +97,3 @@ footer {
   padding: 8px 14px 12px;
   color: #7a5a42;
 }
-
-.version a {
-  color: inherit;
-  text-decoration: underline;
-}
-
-.version a:hover {
-  text-decoration: underline;
-  opacity: 1;
-}
