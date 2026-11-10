@@ -24,6 +24,10 @@ function formatDate(value) {
   }
 }
 
+function lookupTitle(item) {
+  return [item.brand, item.realPn].map((part) => String(part || "").trim()).filter(Boolean).join(" ");
+}
+
 async function loadLookups() {
   const data = await api.runtime.sendMessage({ type: "getCache" });
   return Object.values(data || {}).sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0));
@@ -58,8 +62,8 @@ function render(items) {
     li.innerHTML = `
       <div class="row">
         <div>
-          <div class="pn">${esc(item.realPn)}</div>
-          <div class="meta">${esc(item.brand)} · PartsGeek ${esc(item.internalSku || item.suffix)}</div>
+          <div class="pn">${esc(lookupTitle(item))}</div>
+          <div class="meta">PartsGeek ${esc(item.internalSku || item.suffix)}</div>
           <div class="meta">${esc(formatDate(item.savedAt))}</div>
         </div>
         <div class="actions">

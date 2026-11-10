@@ -26,9 +26,9 @@ Manufacturer part numbers appear on PartsGeek listings, with a copy button:
 
 ![A PartsGeek listing for a Wagner brake rotor, with the manufacturer part number DSX126457E shown next to the PartsGeek SKU](docs/screenshots/listing.png)
 
-The toolbar popup lists saved lookups so you can filter, copy, or clear them:
+The toolbar popup lists saved lookups so you can filter, copy, or clear them. Each row shows the brand in front of the part number:
 
-![The add-on popup listing saved Dorman and Denso lookups, with copy and trash icons beside each part number](docs/screenshots/popup.png)
+![The add-on popup listing saved lookups as Dorman 901-209 and Denso 234-4921, with copy and trash icons](docs/screenshots/popup.png)
 
 ## Install in Firefox as a temporary add-on
 
