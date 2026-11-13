@@ -1,3 +1,7 @@
+THIS IS NOW IN THE OFFICIAL MOZILLA EXTENSION STORE, PLEASE DOWNLOAD IT HERE: https://addons.mozilla.org/en-US/firefox/addon/pg-fetch-real-pn/
+
+This way you can install it properly in a couple clicks and not have to reinstall it manually each time you open your browser.
+
 <img src="docs/icon.png" alt="PartsGeek Fetch Real Part Numbers icon" width="128">
 
 # PartsGeek Fetch Real Part Numbers
